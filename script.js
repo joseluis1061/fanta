@@ -5,7 +5,8 @@ let tl = gsap.timeline({
     trigger: ".two",
     start: "0% 95%",
     end: "50% 50%",
-    scrub: true
+    scrub: true,
+    toggleActions: "restart pause reverse pause",
   }
 })
 
@@ -40,14 +41,14 @@ let tl2 = gsap.timeline({
     start: "25% 95%",
     end: "50% 50%",
     scrub: true, 
-    markers: true
+    toggleActions: "restart pause reverse pause"
   }
 })
 
 tl2.to("#fanta",{
   top: "215%",
-  left: "31%",
-  width: "38%"
+  left: "32%",
+  width: "35%"
 }, 'orange2')
 tl2.to("#orange-cut",{
   top: "210%",
@@ -72,6 +73,7 @@ tl2.to("#leaf2",{
   rotate: "160deg",
   zIndex: "10"
 }, 'orange2')
+
 tl2.from("#cocacola",{
   left: "-30%",
   rotate:"-90deg"
