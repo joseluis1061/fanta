@@ -39,7 +39,8 @@ let tl2 = gsap.timeline({
     trigger: ".three",
     start: "25% 95%",
     end: "50% 50%",
-    scrub: true
+    scrub: true, 
+    markers: true
   }
 })
 
@@ -53,6 +54,7 @@ tl2.to("#orange-cut",{
   left: "40%",
   width:"20%"
 }, 'orange2')
+
 tl2.to("#orange",{
   top: "250%",
   right: "30%",
