@@ -5,8 +5,7 @@ let tl = gsap.timeline({
     trigger: ".two",
     start: "0% 95%",
     end: "50% 50%",
-    scrub: true,
-    markers: false
+    scrub: true
   }
 })
 
