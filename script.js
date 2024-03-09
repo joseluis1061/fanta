@@ -1,37 +1,43 @@
 gsap.registerPlugin(ScrollTrigger);
-
+let fanta = document.querySelector("#fanta");
 let tl = gsap.timeline({
   scrollTrigger:{
     trigger: ".two",
     start: "0% 95%",
     end: "50% 50%",
     scrub: true,
-    toggleActions: "restart pause reverse pause",
+    toggleActions: "restart pause reverse pause"
   }
 })
 
-tl.to("#fanta",{
+tl.to(fanta,{
   top: "120%",
-  left: "0%"
+  left: "0%",
+  width: "40%",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange')
 tl.to("#orange-cut",{
   top: "160%",
-  left: "23%"
+  left: "23%",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange')
 tl.to("#orange",{
   top: "170%",
   right: "10%",
-  width: "15%"
+  width: "15%",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange')
 tl.to("#leaf",{
   top: "110%",
   left: "80%",
-  rotate: "130deg"
+  rotate: "130deg",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange')
 tl.to("#leaf2",{
   top: "150%",
   left: "0%",
-  rotate: "130deg"
+  rotate: "130deg",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange')
 
 // Second Animation
@@ -40,39 +46,47 @@ let tl2 = gsap.timeline({
     trigger: ".three",
     start: "25% 95%",
     end: "50% 50%",
-    scrub: true, 
-    toggleActions: "restart pause reverse pause"
+    scrub: true,
+    markers: false,
+    toggleActions: "restart pause reverse pause",
+    ease: "cubic-bezier(0.19, 1, 0.22, 1)"
   }
 })
 
-tl2.to("#fanta",{
+tl2.to(fanta,{
   top: "215%",
   left: "32%",
-  width: "35%"
+  width: "35%",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange2')
 tl2.to("#orange-cut",{
   top: "210%",
   left: "40%",
-  width:"20%"
+  width:"20%",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange2')
 
 tl2.to("#orange",{
   top: "250%",
   right: "30%",
-  width: "15%"
+  width: "15%",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange2')
 tl2.to("#leaf",{
   top: "225%",
   left: "0%",
   rotate: "160deg", 
-  zIndex: "10"
+  zIndex: "10",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange2')
 tl2.to("#leaf2",{
   top: "230%",
   left: "90%",
   rotate: "160deg",
-  zIndex: "10"
+  zIndex: "10",
+  ease: "cubic-bezier(0.19, 1, 0.22, 1)"
 }, 'orange2')
+
 
 tl2.from("#cocacola",{
   left: "-30%",
